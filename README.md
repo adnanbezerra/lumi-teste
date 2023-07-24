@@ -31,65 +31,15 @@ Por fim, precisa-se de um banco de dados para que o sistema tenha persistência.
 
 ***
 
-## :rocket: Rotas
+## :rocket: Rotas do back-end
 
-```yml
-POST /cadastro
-    - Rota para cadastrar um novo usuário
-    - headers: {}
-    - body:{
-        "nome": "Lorem ipsum",
-        "email": "lorem@gmail.com",
-        "senha": "loremipsum"
-}
-```
-    
-```yml 
-POST /login
-    - Rota para fazer login
-    - headers: {}
-    - body: {
-    "email": "lorem@gmail.com",
-    "senha": "loremipsum"
-    }
-```
-    
-```yml 
-GET /usuarios (autenticada)
-    - Rota para listar todos os usuários
-    - headers: { "Authorization": "Bearer $token" }
-    - body: {}
-```
+T.B.D.
 
-```yml
-GET /usuarios/:id (autenticada)
-    - Rota para listar um usuário pelo id
-    - headers: { "Authorization": "Bearer $token" }
-    - body: {}
-``` 
-
-```yml
-PUT /usuarios/:id (autenticada)
-    - Rota para atualizar um usuário pelo id
-    - headers: { "Authorization": "Bearer $token" }
-    - body: {
-        "nome": "Lorem ipsum2",
-        "email": "lorem2@gmail.com",
-        "senha": "loremipsum2"
-    }
-```
- 
-```yml
-DELETE /usuarios/:id (autenticada)
-    - Rota para deletar um usuário pelo id
-    - headers: { "Authorization": "Bearer $token" }
-    - body: {}
-```
 ***
 
 ## 🏁 Rodando a aplicação
 
-Este projeto foi inicializado com o [Vite](https://vitejs.dev/), então certifique-se que voce tem a ultima versão estável do [Node.js](https://nodejs.org/en/download/) e [npm](https://www.npmjs.com/) rodando localmente.
+Este projeto foi inicializado com o [Vite](https://vitejs.dev/), então certifique-se que voce tem a ultima versão estável do [Node.js](https://nodejs.org/en/download/) e [npm](https://www.npmjs.com/) rodando localmente. Além disso, é preciso que o [PostgreSQL](https://www.postgresql.org/) esteja corretamente instalado na máquina, dado que o banco de dados é feito com ele.
 
 Primeiro, faça o clone desse repositório na sua maquina:
 
@@ -114,7 +64,9 @@ Finalizado o processo, é preciso inicializar os servidores:
 
 ```
 cd front-end
-npm vite
+npm run dev
 cd ../back-end
 npm start
 ```
+
+Agora, é preciso acessar o navegador e acessar a URL http://localhost:5173, de modo a acessar o front-end da aplicação e de fato começar a fazer uso.
